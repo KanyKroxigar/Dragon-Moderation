@@ -11,7 +11,7 @@ intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
 
-class AegisSentinel(commands.Bot):
+class moderationBot(commands.Bot):
     def __init__(self):
         super().__init__(command_prefix='!', intents=intents) 
 
@@ -34,5 +34,6 @@ class AegisSentinel(commands.Bot):
         print(f'Logged in as {self.user} (ID: {self.user.id})')
         print('------')
 
-bot = AegisSentinel()
+bot = moderationBot()
+
 bot.run(TOKEN) 
